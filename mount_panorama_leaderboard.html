@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table.dataTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>TRACKILICIOUS Leaderboard</h2>
+
+<!-- Insert your pandas HTML table here -->
+<div id="leaderboard">
+    <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pos</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Deviation</th>
+      <th>Volatility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Ricardo Rivera</td>
+      <td>2082</td>
+      <td>85</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Thiago Dinarte</td>
+      <td>2054</td>
+      <td>73</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Jace Wright</td>
+      <td>2023</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Quin Smith</td>
+      <td>1989</td>
+      <td>80</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Gabriel Felipe</td>
+      <td>1983</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Renato Dornelles</td>
+      <td>1983</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Jonathan Clifford</td>
+      <td>1966</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Tyler Carr</td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Marc-Antoine Landry</td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Michael Formato</td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Austin Doyle</td>
+      <td>1933</td>
+      <td>74</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Ali Raza</td>
+      <td>1916</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Andreas Borchers</td>
+      <td>1916</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Kenneth Portis II</td>
+      <td>1905</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Joe Allinson</td>
+      <td>1902</td>
+      <td>92</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Justin Beachley</td>
+      <td>1897</td>
+      <td>76</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Neil Kerbal</td>
+      <td>1887</td>
+      <td>68</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Lewandy Dilone</td>
+      <td>1875</td>
+      <td>92</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Diaz Gerald</td>
+      <td>1860</td>
+      <td>94</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Wilson Fernandes</td>
+      <td>1857</td>
+      <td>82</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>rob obrochta</td>
+      <td>1856</td>
+      <td>117</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Mikhail Charles</td>
+      <td>1850</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Mike Vazquez</td>
+      <td>1843</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Ramon Torres</td>
+      <td>1834</td>
+      <td>96</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Vincenzo Senatore</td>
+      <td>1816</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Kuzya Terekhov</td>
+      <td>1816</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Chandler Williams</td>
+      <td>1792</td>
+      <td>73</td>
+      <td>0.0605</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Kevin Blanchette</td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Carlos Guzman</td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Kyle Heslin</td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Kevin Yu</td>
+      <td>1765</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Alex Hansen</td>
+      <td>1759</td>
+      <td>124</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Bernhard Bendl</td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Alex Amez</td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Dieter Santon</td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Casey Schutte</td>
+      <td>1716</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>Andy Estevez</td>
+      <td>1710</td>
+      <td>84</td>
+      <td>0.0607</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>Sam Warden</td>
+      <td>1684</td>
+      <td>83</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>Geir Akslen</td>
+      <td>1683</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>David Cox</td>
+      <td>1683</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>Will Ngo</td>
+      <td>1681</td>
+      <td>85</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>Professor Chronotis</td>
+      <td>1660</td>
+      <td>57</td>
+      <td>0.0608</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>Buggie Watt</td>
+      <td>1658</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>Henrique Machado</td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>Decio Teixeira</td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>Fabio Teixeira</td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>Joao Torres</td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>Colin Sugg</td>
+      <td>1637</td>
+      <td>51</td>
+      <td>0.0601</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>Ryan Eason</td>
+      <td>1631</td>
+      <td>73</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>Brayan De Santiago</td>
+      <td>1623</td>
+      <td>68</td>
+      <td>0.0610</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>Timothy Jadubal  FNM</td>
+      <td>1617</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>Matt Artim</td>
+      <td>1606</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>Rafael Ortega Pelaez</td>
+      <td>1599</td>
+      <td>84</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>Lann Cloud</td>
+      <td>1589</td>
+      <td>69</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>Andrew Rados</td>
+      <td>1584</td>
+      <td>80</td>
+      <td>0.0608</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>Guilherme Goncalves</td>
+      <td>1583</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>Diogo Costa</td>
+      <td>1583</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>Andre Alex  Afonso</td>
+      <td>1566</td>
+      <td>79</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>Joshua Worley</td>
+      <td>1550</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>Noah Macomber</td>
+      <td>1550</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>Parker Standret</td>
+      <td>1550</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>Jason Provolone</td>
+      <td>1523</td>
+      <td>77</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>Tony Danzig</td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>Nicolas Menendez</td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>James Cossaboon</td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>Anthony Kelley  FNM</td>
+      <td>1474</td>
+      <td>80</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>Shane Sullivan</td>
+      <td>1463</td>
+      <td>61</td>
+      <td>0.0607</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>Shane Dumoulin</td>
+      <td>1458</td>
+      <td>124</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>Eric Velez</td>
+      <td>1457</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>Jakub Winter</td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>Marcin Nowacki</td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>Tobiasz Zieminski</td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>Szymon Witte</td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>Ralli Dutchie</td>
+      <td>1443</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>Alex Freeman</td>
+      <td>1417</td>
+      <td>68</td>
+      <td>0.0608</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>Matt Russo</td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>Devin Anthony</td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>Casey Swanseger</td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>spady bud</td>
+      <td>1417</td>
+      <td>84</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>Enmanuel Ramirez</td>
+      <td>1407</td>
+      <td>63</td>
+      <td>0.0601</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>Mitch Nyarady</td>
+      <td>1406</td>
+      <td>68</td>
+      <td>0.0607</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>Moriko Yatanashi</td>
+      <td>1386</td>
+      <td>74</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>Christian Tennariello</td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>Juho Koski</td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>Jan Stam</td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>Jey Daly</td>
+      <td>1379</td>
+      <td>76</td>
+      <td>0.0607</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>Mario Costa</td>
+      <td>1371</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>Wes Romary</td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>Oliwer Sjogren</td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>Braedon Breese</td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>Danny Campbell</td>
+      <td>1335</td>
+      <td>167</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>Hezekiah Thomas</td>
+      <td>1330</td>
+      <td>82</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td>Rod Skyhook</td>
+      <td>1323</td>
+      <td>86</td>
+      <td>0.0608</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>Gil Silverin</td>
+      <td>1310</td>
+      <td>128</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>Cody Groves</td>
+      <td>1310</td>
+      <td>83</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>Nicholas woods</td>
+      <td>1302</td>
+      <td>85</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td>Jakub Trnka</td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>Jan Ondras</td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>Marek Buron</td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>Valerio Martino</td>
+      <td>1266</td>
+      <td>71</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>Pots Weaver</td>
+      <td>1263</td>
+      <td>124</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>Doctor Porkchop</td>
+      <td>1260</td>
+      <td>51</td>
+      <td>0.0606</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>Tomas  Macek</td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td>David Varmuza</td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td>Tomas Balog</td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td>Luke Nelson</td>
+      <td>1237</td>
+      <td>88</td>
+      <td>0.0611</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>Jack Krouse</td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>108</td>
+      <td>Amos Movo</td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>Sean Leitch</td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>Wade Georgeson</td>
+      <td>1198</td>
+      <td>65</td>
+      <td>0.0604</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>James Pierre Read</td>
+      <td>1185</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td>Aimee Lavoie</td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td>Mia Rose</td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td>Brandon Chan</td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td>Fazlee Majeed</td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>116</td>
+      <td>Joan Perez</td>
+      <td>1177</td>
+      <td>92</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>117</td>
+      <td>Jorge Barrios</td>
+      <td>1166</td>
+      <td>77</td>
+      <td>0.0601</td>
+    </tr>
+    <tr>
+      <td>118</td>
+      <td>Selena  Boonstra</td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>119</td>
+      <td>Jess Osborn</td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td>Justin Mackechnie</td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>121</td>
+      <td>George Elmer</td>
+      <td>1124</td>
+      <td>124</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>122</td>
+      <td>Sir Kojay</td>
+      <td>1119</td>
+      <td>117</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>Andrew Oakley</td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td>George Rose</td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>125</td>
+      <td>Kyle Fitzgerald</td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>126</td>
+      <td>Aaron John</td>
+      <td>1106</td>
+      <td>88</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>127</td>
+      <td>Jacob Church</td>
+      <td>1088</td>
+      <td>105</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>128</td>
+      <td>David Livrieri</td>
+      <td>1087</td>
+      <td>99</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td>Quentin Beck</td>
+      <td>1087</td>
+      <td>99</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>130</td>
+      <td>Eric Ghoukasian</td>
+      <td>1053</td>
+      <td>99</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>131</td>
+      <td>Joseph Savage</td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>132</td>
+      <td>Paul Miles</td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>133</td>
+      <td>Carl Bigg</td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td>VICENTE MOREIRA</td>
+      <td>993</td>
+      <td>90</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>135</td>
+      <td>frederick velez</td>
+      <td>977</td>
+      <td>94</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>136</td>
+      <td>Alejandro Pulgarin</td>
+      <td>929</td>
+      <td>124</td>
+      <td>0.0600</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#leaderboard table').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true
+    });
+});
+</script>
+
+</body>
+</html>
