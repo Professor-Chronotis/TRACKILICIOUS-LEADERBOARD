@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table.dataTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>TRACKILICIOUS Leaderboard</h2>
+
+<!-- Insert your pandas HTML table here -->
+<div id="leaderboard">
+    <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pos</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Deviation</th>
+      <th>Volatility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>ryan eason</td>
+      <td>1996</td>
+      <td>86</td>
+      <td>0.0601</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Ricardo Rivera</td>
+      <td>1978</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Ilpo Ruotsalainen</td>
+      <td>1926</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Neil Kerbal</td>
+      <td>1874</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Brayan De Santiago</td>
+      <td>1851</td>
+      <td>85</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Colin Sugg</td>
+      <td>1837</td>
+      <td>80</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Alex Freeman</td>
+      <td>1823</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Christoph Schinke</td>
+      <td>1797</td>
+      <td>91</td>
+      <td>0.0601</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Justin Beachley</td>
+      <td>1771</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Austin Doyle</td>
+      <td>1720</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Sam Warden</td>
+      <td>1716</td>
+      <td>81</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Sara Liu</td>
+      <td>1668</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Joe Allinson</td>
+      <td>1659</td>
+      <td>80</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Matt Hew</td>
+      <td>1640</td>
+      <td>89</td>
+      <td>0.0617</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Professor Chronotis</td>
+      <td>1616</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>DOMINGOS MATRONI</td>
+      <td>1494</td>
+      <td>83</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Ramon Torres</td>
+      <td>1490</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Nicholas woods</td>
+      <td>1469</td>
+      <td>83</td>
+      <td>0.0602</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Doctor Porkchop</td>
+      <td>1468</td>
+      <td>69</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Eric Velez</td>
+      <td>1439</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Shane Sullivan</td>
+      <td>1432</td>
+      <td>80</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Chris Saunderson</td>
+      <td>1422</td>
+      <td>81</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Alex Hansen</td>
+      <td>1387</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Ralli Dutchie</td>
+      <td>1338</td>
+      <td>68</td>
+      <td>0.0604</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Mitch Nyarady</td>
+      <td>1336</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Cody Groves</td>
+      <td>1295</td>
+      <td>81</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Pots Weaver</td>
+      <td>1284</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Valerio Martino</td>
+      <td>1208</td>
+      <td>71</td>
+      <td>0.0611</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Enmanuel Ramirez</td>
+      <td>1201</td>
+      <td>82</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>Joan Perez</td>
+      <td>1188</td>
+      <td>85</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>VICENTE MOREIRA</td>
+      <td>1044</td>
+      <td>86</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Maks Turbinov</td>
+      <td>1027</td>
+      <td>91</td>
+      <td>0.0600</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#leaderboard table').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true
+    });
+});
+</script>
+
+</body>
+</html>
