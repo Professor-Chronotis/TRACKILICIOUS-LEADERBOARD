@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table.dataTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>TRACKILICIOUS Leaderboard</h2>
+
+<!-- Insert your pandas HTML table here -->
+<div id="leaderboard">
+    <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pos</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Deviation</th>
+      <th>Volatility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Eric Ghoukasian</td>
+      <td>1960</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Andre Alex  Afonso</td>
+      <td>1906</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Jake Terrell</td>
+      <td>1852</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Christian Tennariello</td>
+      <td>1798</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Professor Chronotis</td>
+      <td>1743</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Dion Dierosso</td>
+      <td>1689</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Jaeger Kaaru</td>
+      <td>1635</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Nate  Richard</td>
+      <td>1581</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Gil Silverin</td>
+      <td>1527</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Phil Lee</td>
+      <td>1473</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Neil Berrevoets</td>
+      <td>1419</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Ben Beames</td>
+      <td>1365</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Alex Hansen</td>
+      <td>1311</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Doryan Gonin</td>
+      <td>1257</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Miguel Cizeron</td>
+      <td>1202</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Ralli Dutchie</td>
+      <td>1148</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Jon Wad</td>
+      <td>1094</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>John  Santoro</td>
+      <td>1040</td>
+      <td>119</td>
+      <td>0.06</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#leaderboard table').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true
+    });
+});
+</script>
+
+</body>
+</html>
