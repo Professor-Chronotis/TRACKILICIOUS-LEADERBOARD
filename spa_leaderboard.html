@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table.dataTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2>TRACKILICIOUS Leaderboard</h2>
+
+<!-- Insert your pandas HTML table here -->
+<div id="leaderboard">
+    <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pos</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Deviation</th>
+      <th>Volatility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Chandler Williams</td>
+      <td>2031</td>
+      <td>92</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Thiago Dinarte</td>
+      <td>2022</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Jace Wright</td>
+      <td>1923</td>
+      <td>90</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Jake Finn</td>
+      <td>1916</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Josh Mills</td>
+      <td>1860</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Jake Wells</td>
+      <td>1810</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Matt Artim</td>
+      <td>1769</td>
+      <td>86</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Sara Liu</td>
+      <td>1766</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Anthony Kelley  FNM</td>
+      <td>1757</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Joshua Worley</td>
+      <td>1706</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Professor Chronotis</td>
+      <td>1661</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Carlos Guzman</td>
+      <td>1617</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Darren Wicks</td>
+      <td>1603</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Tylor Farmer</td>
+      <td>1573</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Kyle Hirsch</td>
+      <td>1498</td>
+      <td>82</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Alex Freeman</td>
+      <td>1466</td>
+      <td>83</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Justin Brackett</td>
+      <td>1449</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Kurtis Ruston</td>
+      <td>1353</td>
+      <td>83</td>
+      <td>0.0604</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Devin Anthony</td>
+      <td>1346</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Doctor Porkchop</td>
+      <td>1343</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Buggie Watt</td>
+      <td>1323</td>
+      <td>87</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Pots Weaver</td>
+      <td>1278</td>
+      <td>86</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Danny Campbell</td>
+      <td>1255</td>
+      <td>82</td>
+      <td>0.0603</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Kevin Yu</td>
+      <td>1238</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Christopher BARR</td>
+      <td>1194</td>
+      <td>107</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Daniel Hirsch</td>
+      <td>1192</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Toni Vercetti</td>
+      <td>1140</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Chris Logain</td>
+      <td>1089</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Don Donovan</td>
+      <td>1037</td>
+      <td>116</td>
+      <td>0.0600</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#leaderboard table').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true
+    });
+});
+</script>
+
+</body>
+</html>
