@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaderboard</title>
+    
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: rgb(18, 18, 18);
+            color: rgb(0, 174, 239);
+        }
+        table.dataTable {
+            width: 100%;
+        }
+        table.dataTable tbody tr:nth-child(even) {
+            background-color: rgb(35, 35, 35); /* or your light gray */
+        }
+        table.dataTable tbody tr:nth-child(odd) {
+            background-color: rgb(25, 25, 25);
+        }
+        table.dataTable tbody tr:hover {
+            background-color: rgb(45, 45, 45); /* optional hover highlight */
+        }
+    </style>
+</head>
+<body>
+
+<h2>TRACKILICIOUS Bathurst Leaderboard</h2>
+
+<!-- Insert your pandas HTML table here -->
+<div id="leaderboard">
+    <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Pos</th>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Deviation</th>
+      <th>Volatility</th>
+      <th>Races</th>
+      <th>Wins</th>
+      <th>Podiums</th>
+      <th>Top 5's</th>
+      <th>Top 10's</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><a href="../Driver Stats/a64eb3b5cf82.html" style="color:inherit;text-decoration:none;">Ricardo Rivera</a></td>
+      <td>2082</td>
+      <td>85</td>
+      <td>0.0600</td>
+      <td>3</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="../Driver Stats/71a7e2d0f841.html" style="color:inherit;text-decoration:none;">Thiago Dinarte</a></td>
+      <td>2054</td>
+      <td>73</td>
+      <td>0.0602</td>
+      <td>3</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="../Driver Stats/2d82fcb0d382.html" style="color:inherit;text-decoration:none;">Jace Wright</a></td>
+      <td>2023</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><a href="../Driver Stats/150d11a58444.html" style="color:inherit;text-decoration:none;">Quin Smith</a></td>
+      <td>1989</td>
+      <td>80</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><a href="../Driver Stats/e732862b17c6.html" style="color:inherit;text-decoration:none;">Gabriel Felipe</a></td>
+      <td>1983</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><a href="../Driver Stats/9f729c51150d.html" style="color:inherit;text-decoration:none;">Renato Dornelles</a></td>
+      <td>1983</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><a href="../Driver Stats/c727b46567e2.html" style="color:inherit;text-decoration:none;">Jonathan Clifford</a></td>
+      <td>1966</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><a href="../Driver Stats/cae65ba5d200.html" style="color:inherit;text-decoration:none;">Tyler Carr </a></td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><a href="../Driver Stats/44d80602a996.html" style="color:inherit;text-decoration:none;">Marc-Antoine Landry</a></td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><a href="../Driver Stats/ea977f37a2a5.html" style="color:inherit;text-decoration:none;">Michael Formato</a></td>
+      <td>1949</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><a href="../Driver Stats/caa79c5ae3ba.html" style="color:inherit;text-decoration:none;">Austin Doyle</a></td>
+      <td>1933</td>
+      <td>74</td>
+      <td>0.0602</td>
+      <td>4</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><a href="../Driver Stats/f3c84769ff66.html" style="color:inherit;text-decoration:none;">Ali Raza</a></td>
+      <td>1916</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><a href="../Driver Stats/14c55861e2d7.html" style="color:inherit;text-decoration:none;">Andreas Borchers</a></td>
+      <td>1916</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><a href="../Driver Stats/a3ed87c3b257.html" style="color:inherit;text-decoration:none;">Kenneth Portis II</a></td>
+      <td>1905</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><a href="../Driver Stats/ddeb5b3ba076.html" style="color:inherit;text-decoration:none;">Joe Allinson</a></td>
+      <td>1902</td>
+      <td>92</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><a href="../Driver Stats/f4f57a700b53.html" style="color:inherit;text-decoration:none;">Justin Beachley</a></td>
+      <td>1897</td>
+      <td>76</td>
+      <td>0.0600</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><a href="../Driver Stats/6f54d85f7a8f.html" style="color:inherit;text-decoration:none;">Neil Kerbal</a></td>
+      <td>1887</td>
+      <td>68</td>
+      <td>0.0602</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><a href="../Driver Stats/5fdbc0d522dd.html" style="color:inherit;text-decoration:none;">Lewandy Dilone</a></td>
+      <td>1875</td>
+      <td>92</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><a href="../Driver Stats/baf3bd571bac.html" style="color:inherit;text-decoration:none;">Diaz Gerald</a></td>
+      <td>1860</td>
+      <td>94</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><a href="../Driver Stats/db6c881e59b5.html" style="color:inherit;text-decoration:none;">Wilson Fernandes</a></td>
+      <td>1857</td>
+      <td>82</td>
+      <td>0.0602</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><a href="../Driver Stats/8af7e050f428.html" style="color:inherit;text-decoration:none;">rob obrochta</a></td>
+      <td>1856</td>
+      <td>117</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><a href="../Driver Stats/6a854d1f7f38.html" style="color:inherit;text-decoration:none;">Mikhail Charles</a></td>
+      <td>1850</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><a href="../Driver Stats/9a105d6e64ab.html" style="color:inherit;text-decoration:none;">Mike Vazquez</a></td>
+      <td>1843</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><a href="../Driver Stats/ed61b415b480.html" style="color:inherit;text-decoration:none;">Ramon Torres</a></td>
+      <td>1834</td>
+      <td>96</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><a href="../Driver Stats/4ca68d74caff.html" style="color:inherit;text-decoration:none;">Vincenzo Senatore</a></td>
+      <td>1816</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><a href="../Driver Stats/57b91d1821ec.html" style="color:inherit;text-decoration:none;">Kuzya Terekhov</a></td>
+      <td>1816</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><a href="../Driver Stats/41b06697e4ee.html" style="color:inherit;text-decoration:none;">Chandler Williams</a></td>
+      <td>1792</td>
+      <td>73</td>
+      <td>0.0605</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><a href="../Driver Stats/589293e7a1d6.html" style="color:inherit;text-decoration:none;">Kevin Blanchette</a></td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><a href="../Driver Stats/747c5ae22790.html" style="color:inherit;text-decoration:none;">Carlos Guzman</a></td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><a href="../Driver Stats/b3124f9618ef.html" style="color:inherit;text-decoration:none;">Kyle Heslin</a></td>
+      <td>1783</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><a href="../Driver Stats/7586032ae49f.html" style="color:inherit;text-decoration:none;">Kevin Yu</a></td>
+      <td>1765</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><a href="../Driver Stats/757604518d96.html" style="color:inherit;text-decoration:none;">Alex Hansen</a></td>
+      <td>1759</td>
+      <td>124</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><a href="../Driver Stats/b472f9462dd3.html" style="color:inherit;text-decoration:none;">Bernhard Bendl</a></td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><a href="../Driver Stats/d7e27edb7680.html" style="color:inherit;text-decoration:none;">Alex Amez</a></td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><a href="../Driver Stats/efc36462634c.html" style="color:inherit;text-decoration:none;">Dieter Santon</a></td>
+      <td>1750</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><a href="../Driver Stats/8512e89ee10d.html" style="color:inherit;text-decoration:none;">Casey Schutte</a></td>
+      <td>1716</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><a href="../Driver Stats/af9a0bd329c7.html" style="color:inherit;text-decoration:none;">Andy Estevez</a></td>
+      <td>1710</td>
+      <td>84</td>
+      <td>0.0607</td>
+      <td>2</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td><a href="../Driver Stats/5bc210fd4274.html" style="color:inherit;text-decoration:none;">Sam Warden</a></td>
+      <td>1684</td>
+      <td>83</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td><a href="../Driver Stats/a460de9dd3db.html" style="color:inherit;text-decoration:none;">Geir Akslen</a></td>
+      <td>1683</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td><a href="../Driver Stats/8f2f354bd50c.html" style="color:inherit;text-decoration:none;">David Cox</a></td>
+      <td>1683</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td><a href="../Driver Stats/d07a8cf257ca.html" style="color:inherit;text-decoration:none;">Will Ngo</a></td>
+      <td>1681</td>
+      <td>85</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td><a href="../Driver Stats/65ea11a31f64.html" style="color:inherit;text-decoration:none;">Professor Chronotis</a></td>
+      <td>1660</td>
+      <td>57</td>
+      <td>0.0608</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td><a href="../Driver Stats/b7399155798e.html" style="color:inherit;text-decoration:none;">Buggie Watt</a></td>
+      <td>1658</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td><a href="../Driver Stats/90c008edfcb0.html" style="color:inherit;text-decoration:none;">Henrique Machado</a></td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td><a href="../Driver Stats/a16e6efefaa4.html" style="color:inherit;text-decoration:none;">Decio Teixeira</a></td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td><a href="../Driver Stats/599e4e01ca98.html" style="color:inherit;text-decoration:none;">Fabio Teixeira</a></td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td><a href="../Driver Stats/fd3127958f6f.html" style="color:inherit;text-decoration:none;">Joao Torres</a></td>
+      <td>1650</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td><a href="../Driver Stats/c118a5294f76.html" style="color:inherit;text-decoration:none;">Colin Sugg</a></td>
+      <td>1637</td>
+      <td>51</td>
+      <td>0.0601</td>
+      <td>6</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td><a href="../Driver Stats/771029ddf849.html" style="color:inherit;text-decoration:none;">Ryan Eason</a></td>
+      <td>1631</td>
+      <td>73</td>
+      <td>0.0602</td>
+      <td>3</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td><a href="../Driver Stats/3092459f617e.html" style="color:inherit;text-decoration:none;">Brayan De Santiago</a></td>
+      <td>1623</td>
+      <td>68</td>
+      <td>0.0610</td>
+      <td>4</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td><a href="../Driver Stats/ba5111cd4b8d.html" style="color:inherit;text-decoration:none;">Timothy Jadubal  FNM</a></td>
+      <td>1617</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td><a href="../Driver Stats/3f7a985a1572.html" style="color:inherit;text-decoration:none;">Matt Artim</a></td>
+      <td>1606</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td><a href="../Driver Stats/a84cb6debb55.html" style="color:inherit;text-decoration:none;">Rafael Ortega Pelaez</a></td>
+      <td>1599</td>
+      <td>84</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td><a href="../Driver Stats/42c609b75cc1.html" style="color:inherit;text-decoration:none;">Lann Cloud</a></td>
+      <td>1589</td>
+      <td>69</td>
+      <td>0.0600</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td><a href="../Driver Stats/f2fa8a75e08b.html" style="color:inherit;text-decoration:none;">Andrew Rados</a></td>
+      <td>1584</td>
+      <td>80</td>
+      <td>0.0608</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td><a href="../Driver Stats/ed45e6224722.html" style="color:inherit;text-decoration:none;">Guilherme Goncalves</a></td>
+      <td>1583</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td><a href="../Driver Stats/2ec890273a49.html" style="color:inherit;text-decoration:none;">Diogo Costa</a></td>
+      <td>1583</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td><a href="../Driver Stats/7d562656405b.html" style="color:inherit;text-decoration:none;">Andre Alex  Afonso</a></td>
+      <td>1566</td>
+      <td>79</td>
+      <td>0.0603</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td><a href="../Driver Stats/401e70a6c625.html" style="color:inherit;text-decoration:none;">Joshua Worley</a></td>
+      <td>1550</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td><a href="../Driver Stats/e73d9e2e77d3.html" style="color:inherit;text-decoration:none;">Noah Macomber</a></td>
+      <td>1550</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td><a href="../Driver Stats/b17810348840.html" style="color:inherit;text-decoration:none;">Parker Standret</a></td>
+      <td>1550</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td><a href="../Driver Stats/4a26864571ea.html" style="color:inherit;text-decoration:none;">Jason Provolone</a></td>
+      <td>1523</td>
+      <td>77</td>
+      <td>0.0600</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td><a href="../Driver Stats/7ef8ab25b5a4.html" style="color:inherit;text-decoration:none;">Tony Danzig</a></td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td><a href="../Driver Stats/c18953620e7b.html" style="color:inherit;text-decoration:none;">Nicolas Menendez</a></td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td><a href="../Driver Stats/8d3896105a38.html" style="color:inherit;text-decoration:none;">James Cossaboon</a></td>
+      <td>1517</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td><a href="../Driver Stats/3091cd41e642.html" style="color:inherit;text-decoration:none;">Anthony Kelley  FNM</a></td>
+      <td>1474</td>
+      <td>80</td>
+      <td>0.0602</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td><a href="../Driver Stats/b20f3ed9de49.html" style="color:inherit;text-decoration:none;">Shane Sullivan</a></td>
+      <td>1463</td>
+      <td>61</td>
+      <td>0.0607</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td><a href="../Driver Stats/3e4ffae7e86c.html" style="color:inherit;text-decoration:none;">Shane Dumoulin</a></td>
+      <td>1458</td>
+      <td>124</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td><a href="../Driver Stats/436683e6eb74.html" style="color:inherit;text-decoration:none;">Eric Velez</a></td>
+      <td>1457</td>
+      <td>116</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td><a href="../Driver Stats/38256a7d5ffa.html" style="color:inherit;text-decoration:none;">Jakub Winter</a></td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td><a href="../Driver Stats/8092f3bc48cf.html" style="color:inherit;text-decoration:none;">Marcin Nowacki</a></td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td><a href="../Driver Stats/6f17444683c2.html" style="color:inherit;text-decoration:none;">Tobiasz Zieminski</a></td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td><a href="../Driver Stats/3631c8c5adf2.html" style="color:inherit;text-decoration:none;">Szymon Witte</a></td>
+      <td>1450</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td><a href="../Driver Stats/7c649c413d48.html" style="color:inherit;text-decoration:none;">Ralli Dutchie</a></td>
+      <td>1443</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td><a href="../Driver Stats/a7a2f7dfa0af.html" style="color:inherit;text-decoration:none;">Alex Freeman</a></td>
+      <td>1417</td>
+      <td>68</td>
+      <td>0.0608</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td><a href="../Driver Stats/73c1eefa832a.html" style="color:inherit;text-decoration:none;">Matt Russo</a></td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td><a href="../Driver Stats/b69f6c8a7eb6.html" style="color:inherit;text-decoration:none;">Devin Anthony</a></td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td><a href="../Driver Stats/952481e332fa.html" style="color:inherit;text-decoration:none;">Casey Swanseger</a></td>
+      <td>1417</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td><a href="../Driver Stats/0a75211cb195.html" style="color:inherit;text-decoration:none;">spady bud</a></td>
+      <td>1417</td>
+      <td>84</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td><a href="../Driver Stats/518c2a2fd7fc.html" style="color:inherit;text-decoration:none;">Enmanuel Ramirez</a></td>
+      <td>1407</td>
+      <td>63</td>
+      <td>0.0601</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td><a href="../Driver Stats/dd8d4d524321.html" style="color:inherit;text-decoration:none;">Mitch Nyarady</a></td>
+      <td>1406</td>
+      <td>68</td>
+      <td>0.0607</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td><a href="../Driver Stats/9373fe2a3d10.html" style="color:inherit;text-decoration:none;">Moriko Yatanashi</a></td>
+      <td>1386</td>
+      <td>74</td>
+      <td>0.0603</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td><a href="../Driver Stats/dadd106d04c3.html" style="color:inherit;text-decoration:none;">Christian Tennariello</a></td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td><a href="../Driver Stats/5bf05c1cde8c.html" style="color:inherit;text-decoration:none;">Juho Koski</a></td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td><a href="../Driver Stats/d3e2f4ecb74b.html" style="color:inherit;text-decoration:none;">Jan Stam</a></td>
+      <td>1383</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td><a href="../Driver Stats/7439c743d4f4.html" style="color:inherit;text-decoration:none;">Jey Daly</a></td>
+      <td>1379</td>
+      <td>76</td>
+      <td>0.0607</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td><a href="../Driver Stats/8886a29f9d26.html" style="color:inherit;text-decoration:none;">Mario Costa</a></td>
+      <td>1371</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td><a href="../Driver Stats/d83783b53cb8.html" style="color:inherit;text-decoration:none;">Wes Romary</a></td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td><a href="../Driver Stats/255e4570c426.html" style="color:inherit;text-decoration:none;">Oliwer Sjogren</a></td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td><a href="../Driver Stats/281d0a4b0204.html" style="color:inherit;text-decoration:none;">Braedon Breese</a></td>
+      <td>1350</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td><a href="../Driver Stats/4fbf201ff513.html" style="color:inherit;text-decoration:none;">Danny Campbell</a></td>
+      <td>1335</td>
+      <td>167</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td><a href="../Driver Stats/732e24405dc6.html" style="color:inherit;text-decoration:none;">Hezekiah Thomas</a></td>
+      <td>1330</td>
+      <td>82</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td><a href="../Driver Stats/15b926b53265.html" style="color:inherit;text-decoration:none;">Rod Skyhook</a></td>
+      <td>1323</td>
+      <td>86</td>
+      <td>0.0608</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td><a href="../Driver Stats/4aed5c96ea39.html" style="color:inherit;text-decoration:none;">Gil Silverin</a></td>
+      <td>1310</td>
+      <td>128</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td><a href="../Driver Stats/eb35c3dd18e4.html" style="color:inherit;text-decoration:none;">Cody Groves</a></td>
+      <td>1310</td>
+      <td>83</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td><a href="../Driver Stats/9255a7bbcdca.html" style="color:inherit;text-decoration:none;">Nicholas woods</a></td>
+      <td>1302</td>
+      <td>85</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td><a href="../Driver Stats/e0d7dd97e63e.html" style="color:inherit;text-decoration:none;">Jakub Trnka</a></td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td><a href="../Driver Stats/cc705433f903.html" style="color:inherit;text-decoration:none;">Jan Ondras</a></td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td><a href="../Driver Stats/cdef4e8d1a34.html" style="color:inherit;text-decoration:none;">Marek Buron</a></td>
+      <td>1284</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td><a href="../Driver Stats/b41e6428d0f0.html" style="color:inherit;text-decoration:none;">Valerio Martino</a></td>
+      <td>1266</td>
+      <td>71</td>
+      <td>0.0603</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td><a href="../Driver Stats/11aca9628841.html" style="color:inherit;text-decoration:none;">Pots Weaver</a></td>
+      <td>1263</td>
+      <td>124</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td><a href="../Driver Stats/77c44e8d966b.html" style="color:inherit;text-decoration:none;">Doctor Porkchop</a></td>
+      <td>1260</td>
+      <td>51</td>
+      <td>0.0606</td>
+      <td>7</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td><a href="../Driver Stats/fbfdee2929cf.html" style="color:inherit;text-decoration:none;">Tomas  Macek</a></td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td><a href="../Driver Stats/159378ce8a0d.html" style="color:inherit;text-decoration:none;">David Varmuza</a></td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td><a href="../Driver Stats/bb7d53944f23.html" style="color:inherit;text-decoration:none;">Tomas Balog</a></td>
+      <td>1250</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td><a href="../Driver Stats/834b77376c64.html" style="color:inherit;text-decoration:none;">Luke Nelson</a></td>
+      <td>1237</td>
+      <td>88</td>
+      <td>0.0611</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td><a href="../Driver Stats/4cf684838450.html" style="color:inherit;text-decoration:none;">Jack Krouse</a></td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>108</td>
+      <td><a href="../Driver Stats/58dd0090a7e8.html" style="color:inherit;text-decoration:none;">Amos Movo</a></td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td><a href="../Driver Stats/c56471b4daa3.html" style="color:inherit;text-decoration:none;">Sean Leitch</a></td>
+      <td>1217</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td><a href="../Driver Stats/cd4f87a81383.html" style="color:inherit;text-decoration:none;">Wade Georgeson</a></td>
+      <td>1198</td>
+      <td>65</td>
+      <td>0.0604</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td><a href="../Driver Stats/bad22848b119.html" style="color:inherit;text-decoration:none;">James Pierre Read</a></td>
+      <td>1185</td>
+      <td>116</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td><a href="../Driver Stats/3848c8fbc86a.html" style="color:inherit;text-decoration:none;">Aimee Lavoie</a></td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td><a href="../Driver Stats/bd0d61067e06.html" style="color:inherit;text-decoration:none;">Mia Rose</a></td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td><a href="../Driver Stats/42ef2ac743b4.html" style="color:inherit;text-decoration:none;">Brandon Chan</a></td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td><a href="../Driver Stats/e6dc5efe9917.html" style="color:inherit;text-decoration:none;">Fazlee Majeed</a></td>
+      <td>1184</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>116</td>
+      <td><a href="../Driver Stats/79ca32f737ac.html" style="color:inherit;text-decoration:none;">Joan Perez</a></td>
+      <td>1177</td>
+      <td>92</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>117</td>
+      <td><a href="../Driver Stats/e21c527a1fb7.html" style="color:inherit;text-decoration:none;">Jorge Barrios</a></td>
+      <td>1166</td>
+      <td>77</td>
+      <td>0.0601</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>118</td>
+      <td><a href="../Driver Stats/b88a514e42d2.html" style="color:inherit;text-decoration:none;">Selena  Boonstra</a></td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>119</td>
+      <td><a href="../Driver Stats/c9cccd04f608.html" style="color:inherit;text-decoration:none;">Jess Osborn</a></td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td><a href="../Driver Stats/a63c3478f490.html" style="color:inherit;text-decoration:none;">Justin Mackechnie</a></td>
+      <td>1150</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>121</td>
+      <td><a href="../Driver Stats/73d5a31810c8.html" style="color:inherit;text-decoration:none;">George Elmer</a></td>
+      <td>1124</td>
+      <td>124</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>122</td>
+      <td><a href="../Driver Stats/86005c31d10f.html" style="color:inherit;text-decoration:none;">Sir Kojay</a></td>
+      <td>1119</td>
+      <td>117</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td><a href="../Driver Stats/ddf170df7e28.html" style="color:inherit;text-decoration:none;">Andrew Oakley</a></td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td><a href="../Driver Stats/be72035bb458.html" style="color:inherit;text-decoration:none;">George Rose</a></td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>125</td>
+      <td><a href="../Driver Stats/b79709a9b131.html" style="color:inherit;text-decoration:none;">Kyle Fitzgerald</a></td>
+      <td>1117</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>126</td>
+      <td><a href="../Driver Stats/7202309548f6.html" style="color:inherit;text-decoration:none;">Aaron John</a></td>
+      <td>1106</td>
+      <td>88</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>127</td>
+      <td><a href="../Driver Stats/460ec19eca4e.html" style="color:inherit;text-decoration:none;">Jacob Church</a></td>
+      <td>1088</td>
+      <td>105</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>128</td>
+      <td><a href="../Driver Stats/bf29093c947b.html" style="color:inherit;text-decoration:none;">David Livrieri</a></td>
+      <td>1087</td>
+      <td>99</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td><a href="../Driver Stats/b294415ecaa0.html" style="color:inherit;text-decoration:none;">Quentin Beck</a></td>
+      <td>1087</td>
+      <td>99</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>130</td>
+      <td><a href="../Driver Stats/d014a58a7eeb.html" style="color:inherit;text-decoration:none;">Eric Ghoukasian</a></td>
+      <td>1053</td>
+      <td>99</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>131</td>
+      <td><a href="../Driver Stats/4f254044b243.html" style="color:inherit;text-decoration:none;">Joseph Savage</a></td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>132</td>
+      <td><a href="../Driver Stats/088414bf1199.html" style="color:inherit;text-decoration:none;">Paul Miles</a></td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>133</td>
+      <td><a href="../Driver Stats/784316acb090.html" style="color:inherit;text-decoration:none;">Carl Bigg</a></td>
+      <td>1017</td>
+      <td>98</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td><a href="../Driver Stats/41f4ba28e09a.html" style="color:inherit;text-decoration:none;">VICENTE MOREIRA</a></td>
+      <td>993</td>
+      <td>90</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>135</td>
+      <td><a href="../Driver Stats/ca700c734c35.html" style="color:inherit;text-decoration:none;">frederick velez</a></td>
+      <td>977</td>
+      <td>94</td>
+      <td>0.0600</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>136</td>
+      <td><a href="../Driver Stats/3dba9d73a0ad.html" style="color:inherit;text-decoration:none;">Alejandro Pulgarin</a></td>
+      <td>929</td>
+      <td>124</td>
+      <td>0.0600</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p style="text-align:center;font-size:small;color:gray;">
+    Last updated 2025-10-17 16:31:07
+</p>
+
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#leaderboard table').DataTable({
+        paging: true,
+        searching: true,
+        ordering: true,
+        pageLength: 50
+    });
+});
+</script>
+
+</body>
+</html>
