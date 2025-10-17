@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Brian Clementi â€“ TRACKILICIOUS Stats</title>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: rgb(18, 18, 18);
+            color: rgb(0, 174, 239);
+        }
+        img {
+            max-width: 800px;
+            display: block;
+            margin: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #000000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: rgb(50, 50, 50);
+            color: rgb(0, 174, 239)
+        }
+        table.dataTable tbody tr:nth-child(even) {
+            background-color: rgb(35, 35, 35); /* or your light gray */
+        }
+        table.dataTable tbody tr:nth-child(odd) {
+            background-color: rgb(25, 25, 25);
+        }
+        table.dataTable tbody tr:hover {
+            background-color: rgb(45, 45, 45); /* optional hover highlight */
+        }
+        table.dataTable {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Brian Clementi</h1>
+    <img src="C:\Users\Gary\Documents\GitHub\Auto-League\Rated Results\TRACKILICIOUS\Driver Stats\5d422c085c8e_rating.png" alt="Rating Chart">
+    <div id="driver_stats">
+        <table class="dataframe display">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Track</th>
+      <th>Rating</th>
+      <th>Recent Rating Change</th>
+      <th>Races</th>
+      <th>Wins</th>
+      <th>Podiums</th>
+      <th>Top 5's</th>
+      <th>Top 10's</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="../Leaderboards/all_leaderboard.html" style="color:inherit;text-decoration:none;">- Combined -</a></td>
+      <td>1892</td>
+      <td>134.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><a href="../Leaderboards/silverstone_leaderboard.html" style="color:inherit;text-decoration:none;">Silverstone</a></td>
+      <td>1863</td>
+      <td>151.8</td>
+      <td>2</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    <p style="text-align:center;font-size:small;color:gray;">
+        Last updated 2025-10-17 16:31:30
+    </p>
+<script>
+$(document).ready(function() {
+    // Initialize DataTables on the first table in #leaderboard
+    $('#driver_stats table').DataTable({
+        ordering: true,
+        paging: false,
+        searching: false,
+    });
+});
+</script>
+</body>
+</html>
